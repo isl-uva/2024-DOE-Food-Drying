@@ -1,0 +1,5 @@
+FMIL: module = Model, log level = 2: [][FMU status:Error] Error: The following error was detected at time: 2546.56251459723
+FMIL: module = Model, log level = 2: [][FMU status:Error]   Mass fraction X[1] = -0.000508029 of substance water
+of medium "Buildings.Media.Air" is not in the range 0..1
+  Failed condition: noEvent(DW.port_a1.Xi_outflow[1] >= -1E-05) and noEvent(DW.port_a1.Xi_outflow[1] <= 1.00001)
+FMIL: module = Model, log level = 2: [][FMU status:Error] fmi2GetDerivatives: dsblock_ failed, QiErr = 1
