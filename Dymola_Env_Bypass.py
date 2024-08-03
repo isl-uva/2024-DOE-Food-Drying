@@ -58,7 +58,7 @@ class DymolaEnv(Env):
         self.observation_space = Box(low=np.array([0]), high=np.array([1]), dtype=np.float32)
 
         # load fmu file
-        self.model = load_fmu("DWHP1.fmu", kind='cs', log_level=2)
+        self.model = load_fmu("DWHP1 1.fmu", kind='cs', log_level=2)
 
         self.output = 30  ## numbers of outputs
         self.start_time = 0  #
@@ -74,7 +74,9 @@ class DymolaEnv(Env):
         # read weather data
         weather_af=[]
         weather_tp=[]
-        with open("modelica_input_data.txt", 'r') as file:
+
+        # with open("modelica_input_data.txt", 'r') as file:
+        with open("CLL_modelica_input.txt", 'r') as file:
             for line in file:
                 # Split the line into individual elements
                 parts = line.strip().split('\t')
@@ -229,7 +231,7 @@ class DymolaEnv(Env):
         # Initialize the model with the start time
 
         if self.current_time >= self.end_time:
-            self.model = load_fmu("DWHP1.fmu", kind='cs', log_level=2)
+            self.model = load_fmu("DWHP1 1.fmu", kind='cs', log_level=2)
             self.model.reset()
             self.model.initialize(self.start_time)
             self.current_time = 0
@@ -240,7 +242,7 @@ class DymolaEnv(Env):
         if self.current_time>0:
             if not self.done:
                 self.model.terminate()
-                self.model = load_fmu("DWHP1.fmu", kind='cs', log_level=2)
+                self.model = load_fmu("DWHP1 1.fmu", kind='cs', log_level=2)
                 self.model.reset()
                 self.model.initialize(self.start_time)
                 self.current_time = 0

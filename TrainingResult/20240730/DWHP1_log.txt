@@ -1,0 +1,18 @@
+FMIL: module = Model, log level = 2: [][FMU status:Error] Error: The following error was detected at time: 8499.27389116644
+FMIL: module = Model, log level = 2: [][FMU status:Error] 
+Model error - power: (0.00390625*DW.multi_channels.channel[1].T_a_1[3]) ^ (1.81) = (-8.1874) ^ (1.81)
+
+FMIL: module = Model, log level = 2: [][FMU status:Error] fmi2GetDerivatives: dsblock_ failed, QiErr = 1
+FMIL: module = Model, log level = 2: [][FMU status:Error] Error: The following error was detected at time: 10784.39438993393
+FMIL: module = Model, log level = 2: [][FMU status:Error]   Mass fraction X[1] = -0.00561311 of substance water
+of medium "Buildings.Media.Air" is not in the range 0..1
+  Failed condition: noEvent(DW.state_b2_inflow.X[1] >= -1E-05) and noEvent(DW.state_b2_inflow.X[1] <= 1.00001)
+FMIL: module = Model, log level = 2: [][FMU status:Error] fmi2GetDerivatives: dsblock_ failed, QiErr = 1
+FMIL: module = Model, log level = 2: [][FMU status:Error] Error: The following error was detected at time: 10780.05340828938
+FMIL: module = Model, log level = 2: [][FMU status:Error]   In DWHP1.HP.souCoi.vol.dynBal.medium: Temperature T exceeded its maximum allowed value of 150 degC (423.15 Kelvin)
+as required from medium model "Buildings.Media.Air".
+  Failed condition: noEvent(HP.souCoi.vol.dynBal.medium.T <= 423.15)
+FMIL: module = Model, log level = 2: [][FMU status:Error] fmi2GetEventIndicators: dsblock_ failed, QiErr = 1
+FMIL: module = Model, log level = 2: [Sundials][FMU status:Error] SUNDIALS_ERROR: CVode() failed with flag = CV_RTFUNC_FAIL
+FMIL: module = Model, log level = 2: [][FMU status:Error] fmi2DoStep: integration_step failed
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated

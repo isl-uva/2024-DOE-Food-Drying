@@ -1,75 +1,12 @@
-FMIL: module = Model, log level = 2: [][FMU status:Error] Error: The following error was detected at time: 4458.471069398966
-FMIL: module = Model, log level = 2: [][FMU status:Error]   Mass fraction X[1] = 1.21487 of substance water
-of medium "Buildings.Media.Air" is not in the range 0..1
-  Failed condition: noEvent(DW.state_b1_inflow.X[1] >= -1E-05) and noEvent(DW.state_b1_inflow.X[1] <= 1.00001)
-FMIL: module = Model, log level = 2: [][FMU status:Error] fmi2GetDerivatives: dsblock_ failed, QiErr = 1
-FMIL: module = Model, log level = 2: [][FMU status:Error] Error: The following error was detected at time: 7177.496068096221
-FMIL: module = Model, log level = 2: [][FMU status:Error]   Mass fraction X[1] = 51.277 of substance water
-of medium "Buildings.Media.Air" is not in the range 0..1
-  Failed condition: noEvent(DW.state_b1_inflow.X[1] >= -1E-05) and noEvent(DW.state_b1_inflow.X[1] <= 1.00001)
-FMIL: module = Model, log level = 2: [][FMU status:Error] fmi2GetDerivatives: dsblock_ failed, QiErr = 1
-FMIL: module = Model, log level = 2: [][FMU status:Error] Error: The following error was detected at time: 9507.625780132847
-FMIL: module = Model, log level = 2: [][FMU status:Error]   Mass fraction X[1] = -67.5886 of substance water
-of medium "Buildings.Media.Air" is not in the range 0..1
-  Failed condition: noEvent(DW.state_b1_inflow.X[1] >= -1E-05) and noEvent(DW.state_b1_inflow.X[1] <= 1.00001)
-FMIL: module = Model, log level = 2: [][FMU status:Error] fmi2GetDerivatives: dsblock_ failed, QiErr = 1
-FMIL: module = Model, log level = 2: [][FMU status:Error] Error: The following error was detected at time: 9800.715767172715
-FMIL: module = Model, log level = 2: [][FMU status:Error]   Mass fraction X[1] = 2.8314 of substance water
-of medium "Buildings.Media.Air" is not in the range 0..1
-  Failed condition: noEvent(DW.state_b1_inflow.X[1] >= -1E-05) and noEvent(DW.state_b1_inflow.X[1] <= 1.00001)
-FMIL: module = Model, log level = 2: [][FMU status:Error] fmi2GetDerivatives: dsblock_ failed, QiErr = 1
-FMIL: module = Model, log level = 2: [][FMU status:Error] Error: The following error was detected at time: 10337.11781493546
-FMIL: module = Model, log level = 2: [][FMU status:Error]   Mass fraction X[1] = -13.5888 of substance water
-of medium "Buildings.Media.Air" is not in the range 0..1
-  Failed condition: noEvent(DW.state_b1_inflow.X[1] >= -1E-05) and noEvent(DW.state_b1_inflow.X[1] <= 1.00001)
-FMIL: module = Model, log level = 2: [][FMU status:Error] fmi2GetDerivatives: dsblock_ failed, QiErr = 1
-FMIL: module = Model, log level = 2: [][FMU status:Error] Error: The following error was detected at time: 10881.04092070764
-FMIL: module = Model, log level = 2: [][FMU status:Error]   Mass fraction X[1] = 6129.47 of substance water
-of medium "Buildings.Media.Air" is not in the range 0..1
-  Failed condition: noEvent(DW.state_b1_inflow.X[1] >= -1E-05) and noEvent(DW.state_b1_inflow.X[1] <= 1.00001)
-FMIL: module = Model, log level = 2: [][FMU status:Error] fmi2GetDerivatives: dsblock_ failed, QiErr = 1
-FMIL: module = Model, log level = 2: [][FMU status:Error] Error: The following error was detected at time: 11145.69450570919
-FMIL: module = Model, log level = 2: [][FMU status:Error]   Mass fraction X[1] = -21284.8 of substance water
-of medium "Buildings.Media.Air" is not in the range 0..1
-  Failed condition: noEvent(DW.state_b1_inflow.X[1] >= -1E-05) and noEvent(DW.state_b1_inflow.X[1] <= 1.00001)
-FMIL: module = Model, log level = 2: [][FMU status:Error] fmi2GetDerivatives: dsblock_ failed, QiErr = 1
-FMIL: module = Model, log level = 2: [][FMU status:Error] Error: The following error was detected at time: 11228.69328929095
-FMIL: module = Model, log level = 2: [][FMU status:Error]   Mass fraction X[1] = -1100.48 of substance water
-of medium "Buildings.Media.Air" is not in the range 0..1
-  Failed condition: noEvent(DW.state_b1_inflow.X[1] >= -1E-05) and noEvent(DW.state_b1_inflow.X[1] <= 1.00001)
-FMIL: module = Model, log level = 2: [][FMU status:Error] fmi2GetDerivatives: dsblock_ failed, QiErr = 1
-FMIL: module = Model, log level = 2: [][FMU status:Error] Error: The following error was detected at time: 11334.65285268467
-FMIL: module = Model, log level = 2: [][FMU status:Error]   Mass fraction X[1] = -0.877846 of substance water
-of medium "Buildings.Media.Air" is not in the range 0..1
-  Failed condition: noEvent(DW.state_b1_inflow.X[1] >= -1E-05) and noEvent(DW.state_b1_inflow.X[1] <= 1.00001)
-FMIL: module = Model, log level = 2: [][FMU status:Error] fmi2GetDerivatives: dsblock_ failed, QiErr = 1
-FMIL: module = Model, log level = 2: [][FMU status:Error] Error: The following error was detected at time: 12207.09038124997
-FMIL: module = Model, log level = 2: [][FMU status:Error]   Mass fraction X[1] = -13.5255 of substance water
-of medium "Buildings.Media.Air" is not in the range 0..1
-  Failed condition: noEvent(DW.state_b1_inflow.X[1] >= -1E-05) and noEvent(DW.state_b1_inflow.X[1] <= 1.00001)
-FMIL: module = Model, log level = 2: [][FMU status:Error] fmi2GetDerivatives: dsblock_ failed, QiErr = 1
-FMIL: module = Model, log level = 2: [][FMU status:Error] Error: The following error was detected at time: 12478.0911676926
-FMIL: module = Model, log level = 2: [][FMU status:Error]   Mass fraction X[1] = -132.648 of substance water
-of medium "Buildings.Media.Air" is not in the range 0..1
-  Failed condition: noEvent(DW.state_b1_inflow.X[1] >= -1E-05) and noEvent(DW.state_b1_inflow.X[1] <= 1.00001)
-FMIL: module = Model, log level = 2: [][FMU status:Error] fmi2GetDerivatives: dsblock_ failed, QiErr = 1
-FMIL: module = Model, log level = 2: [][FMU status:Error] Error: The following error was detected at time: 12504.73590747459
-FMIL: module = Model, log level = 2: [][FMU status:Error]   Mass fraction X[1] = 3.42447 of substance water
-of medium "Buildings.Media.Air" is not in the range 0..1
-  Failed condition: noEvent(DW.state_b1_inflow.X[1] >= -1E-05) and noEvent(DW.state_b1_inflow.X[1] <= 1.00001)
-FMIL: module = Model, log level = 2: [][FMU status:Error] fmi2GetDerivatives: dsblock_ failed, QiErr = 1
-FMIL: module = Model, log level = 2: [][FMU status:Error] Error: The following error was detected at time: 12584.14486853037
-FMIL: module = Model, log level = 2: [][FMU status:Error]   Mass fraction X[1] = 14.7688 of substance water
-of medium "Buildings.Media.Air" is not in the range 0..1
-  Failed condition: noEvent(DW.state_b1_inflow.X[1] >= -1E-05) and noEvent(DW.state_b1_inflow.X[1] <= 1.00001)
-FMIL: module = Model, log level = 2: [][FMU status:Error] fmi2GetDerivatives: dsblock_ failed, QiErr = 1
-FMIL: module = Model, log level = 2: [][FMU status:Error] Error: The following error was detected at time: 13026.01653602155
-FMIL: module = Model, log level = 2: [][FMU status:Error]   Mass fraction X[1] = -414.248 of substance water
-of medium "Buildings.Media.Air" is not in the range 0..1
-  Failed condition: noEvent(DW.state_b1_inflow.X[1] >= -1E-05) and noEvent(DW.state_b1_inflow.X[1] <= 1.00001)
-FMIL: module = Model, log level = 2: [][FMU status:Error] fmi2GetDerivatives: dsblock_ failed, QiErr = 1
-FMIL: module = Model, log level = 2: [][FMU status:Error] Error: The following error was detected at time: 14029.4220868289
-FMIL: module = Model, log level = 2: [][FMU status:Error]   Mass fraction X[1] = -34.5828 of substance water
-of medium "Buildings.Media.Air" is not in the range 0..1
-  Failed condition: noEvent(DW.state_b1_inflow.X[1] >= -1E-05) and noEvent(DW.state_b1_inflow.X[1] <= 1.00001)
-FMIL: module = Model, log level = 2: [][FMU status:Error] fmi2GetDerivatives: dsblock_ failed, QiErr = 1
+FMIL: module = Model, log level = 2: [][FMU status:Error] ... loading "tab1" from "F:/My Drive/Papers/2025 Winter ASHRAE/Design_optimization/weather_inputfiles/Typical/CLL_modelica_input.txt"
+Error: The following error was detected at time: 0
+FMIL: module = Model, log level = 2: [][FMU status:Error] Not possible to open file "F:/My Drive/Papers/2025 Winter ASHRAE/Design_optimization/weather_inputfiles/Typical/CLL_modelica_input.txt": No such file or directory
+
+FMIL: module = Model, log level = 2: [][FMU status:Error] The stack of functions is:
+FMIL: module = Model, log level = 2: [][FMU status:Error] Modelica.Blocks.Types.ExternalCombiTimeTable
+FMIL: module = Model, log level = 2: [][FMU status:Error] Modelica.Blocks.Types.ExternalCombiTimeTable((if combiTimeTable1.tableOnFile then combiTimeTable1.tableName else "NoName"), (if combiTimeTable1.tableOnFile and combiTimeTable1.fileName <> "NoName" and  not Modelica.Utilities.Strings.isEmpty(combiTimeTable1.fileName) then combiTimeTable1.fileName else "NoName"), combiTimeTable1.table, combiTimeTable1.startTime/combiTimeTable1.timeScale, combiTim...
+FMIL: module = Model, log level = 2: [][FMU status:Error] 
+FMIL: module = Model, log level = 2: [][FMU status:Error] fmiInitialize: dsblock_ failed, QiErr = 1
+FMIL: module = Model, log level = 2: [][FMU status:Error] Unless otherwise indicated by error messages, possible errors are (non-exhaustive):
+The model references external data that is not present on the target machine, at least not with the same location.
+
