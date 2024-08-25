@@ -19,7 +19,7 @@ class hyper_parameters():
         parser.add_argument("--critic_fc3", type=int, default=32, help="CriticNetwork linear 3 output dims")
         parser.add_argument("--n_actions", type=int, default=[1,1,1], help="The action space dimensions of all agents are eg:[2,3]. There are two agents whose action spaces are 2 3")
         parser.add_argument("--n_agents",type=int, default=3, help="number of agents")
-        parser.add_argument("--chkpt_dir", type=str, default='model/maddpg/', help="model save/load chkpt_dir eg':model/maddpg/'")
+        parser.add_argument("--chkpt_dir", type=str, default='model/maddpg/20240809/', help="model save/load chkpt_dir eg':model/maddpg/'")
         parser.add_argument("--gamma", type=float, default=0.95, help="attenuation factor gamma gamma Need to consider carefully because different gamma needs different effects")
         parser.add_argument("--tau", type=float, default=0.01, help="soft update parameters")
         parser.add_argument("--buffer_max_size", type=int, default=1000000, help="Maximum data capacity of experience replay")

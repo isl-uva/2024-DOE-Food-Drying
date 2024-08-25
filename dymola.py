@@ -7,7 +7,7 @@ def _main_():
     #fmu_tes()
 
     ## run the 2 systems and get results
-    Paras=[0.4,0.4,10,0.5,273.15+46,323]
+    Paras=[0.4,0.4,10,0.5,273.15+46,323,0.2]
     # number of lists == 30
     # (i=0-5) The first 6 lists: process fan power, regen fan power, DW power, HP power, Heater1 power, Heater2 power
     # (i=6-8),(i=9-11),(i=12-14),(i=15-17),(i=18-20),(i=21-23),(i=24-26),(i=27-29)
@@ -24,7 +24,7 @@ def _main_():
 def tesbed(system,paras,endtime,timestep):
     ## paras=[fanflow,Tsp_heater1,Tsp_heater2,Toa,Yoa,Speed_HP]
     #print(f"UVA_{system}.fmu")
-    model=load_fmu(f"{system}_fmu 1.fmu", kind='cs', log_level=2)
+    model=load_fmu(f"{system}_S.fmu", kind='cs', log_level=2)
     output=30 ## numbers of outputs
     start_time = 0  #
     end_time = endtime  #
@@ -53,6 +53,7 @@ def tesbed(system,paras,endtime,timestep):
         model.set('SP_HP', paras[3])
         model.set('Tset1', paras[4])
         model.set('Tset2', paras[5])
+        model.set('Damper', paras[6])
 
         model.do_step(current_time, step_size, True)
 

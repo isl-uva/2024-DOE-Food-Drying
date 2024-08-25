@@ -15,7 +15,7 @@ with open(file_path, 'r') as file:
 
 output=30 ## numbers of outputs
 start_time = 0  #
-end_time = 4*3600  #
+end_time = 6*3600  #
 step_size = 300  # Define your own step size, unit is second, 300s = 5min
 replaytime = 1
 a_old=np.ones([30])
@@ -25,17 +25,18 @@ for j in range(replaytime):
     result_all=[]
 
     print(f'replay time:{j}')
-    model=load_fmu("DWHP1.fmu", kind='cs', log_level=2)
+    model=load_fmu("DWHP1_.fmu", kind='cs', log_level=2)
     model.reset()
     model.initialize(start_time)
     print("success boot")
 
     current_time = start_time
 
-    for i in range(len(data)):
+    for i in range(72):
         results=[]
         print(f"current time: {current_time/60} min")
-        paras=data[i]
+        # paras=data[i]
+        paras = [0.4, 0.4, 10, 0.2, 273.15+46, 273.15+46, 0.2]
         model.set('FLOW_p', paras[0])
         model.set('FLOW_r', paras[1])
         model.set('N', paras[2])
@@ -58,13 +59,13 @@ for j in range(replaytime):
         a=np.array(results)
         error_a=a-a_old
         a_old=a
-        print(error_a)
+         # print(error_a)
 
         current_time+=step_size
 
     model.terminate()
 
-    print(result_all)
-    print(len(result_all))
-    print(len(data))
-    save_variables('interruptoutput.json', result_all)
+    # print(result_all)
+    # print(len(result_all))
+    # print(len(data))
+    # save_variables('interruptoutput.json', result_all)

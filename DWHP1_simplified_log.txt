@@ -1,0 +1,12 @@
+FMIL: module = Model, log level = 2: [][FMU status:Error] ... loading "tab1" from "/home/hang/Documents/DWHP/CLL_modelica_input.txt"
+Error: The following error was detected at time: 0
+FMIL: module = Model, log level = 2: [][FMU status:Error] Not possible to open file "/home/hang/Documents/DWHP/CLL_modelica_input.txt": No such file or directory
+
+FMIL: module = Model, log level = 2: [][FMU status:Error] The stack of functions is:
+FMIL: module = Model, log level = 2: [][FMU status:Error] Modelica.Blocks.Types.ExternalCombiTimeTable
+FMIL: module = Model, log level = 2: [][FMU status:Error] Modelica.Blocks.Types.ExternalCombiTimeTable((if combiTimeTable1.tableOnFile then combiTimeTable1.tableName else "NoName"), (if combiTimeTable1.tableOnFile and combiTimeTable1.fileName <> "NoName" and  not Modelica.Utilities.Strings.isEmpty(combiTimeTable1.fileName) then combiTimeTable1.fileName else "NoName"), combiTimeTable1.table, combiTimeTable1.startTime/combiTimeTable1.timeScale, combiTim...
+FMIL: module = Model, log level = 2: [][FMU status:Error] 
+FMIL: module = Model, log level = 2: [][FMU status:Error] fmiInitialize: dsblock_ failed, QiErr = 1
+FMIL: module = Model, log level = 2: [][FMU status:Error] Unless otherwise indicated by error messages, possible errors are (non-exhaustive):
+The model references external data that is not present on the target machine, at least not with the same location.
+

@@ -79,7 +79,8 @@ class Agent:
         actions = self.actor.forward(state)
         # print(f'choose actions: {actions}')
         # noise : noise
-        noise = torch.randn(1).to(self.actor.device) *0.1
+        # noise = torch.randn(1).to(self.actor.device) *0.1
+        noise = torch.randn(1).to(self.actor.device) * 0.0
         # noise = torch.random.normal(0, self.max_action * self.noise, size=self.action_dim)
         # print(f'noise: {noise}')
         actions = (actions + noise).clip(0,1)

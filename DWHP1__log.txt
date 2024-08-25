@@ -1,0 +1,77 @@
+FMIL: module = Model, log level = 2: [][FMU status:Error] Error: The following error was detected at time: 360.6795883607822
+FMIL: module = Model, log level = 2: [][FMU status:Error]   In DWHP1.HP.souCoi.vol.dynBal.medium: Temperature T exceeded its maximum allowed value of 150 degC (423.15 Kelvin)
+as required from medium model "Buildings.Media.Air".
+  Failed condition: noEvent(HP.souCoi.vol.dynBal.medium.T <= 423.15)
+FMIL: module = Model, log level = 2: [][FMU status:Error] fmi2GetEventIndicators: dsblock_ failed, QiErr = 1
+FMIL: module = Model, log level = 2: [Sundials][FMU status:Error] SUNDIALS_ERROR: CVode() failed with flag = CV_RTFUNC_FAIL
+FMIL: module = Model, log level = 2: [][FMU status:Error] fmi2DoStep: integration_step failed
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated
+FMIL: module = Model, log level = 2: [IllegalFunctionCall][FMU status:Error] fmi2DoStep: model is terminated

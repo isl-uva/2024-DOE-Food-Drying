@@ -25,7 +25,8 @@ parse_args_maddpg = hyper_paras.parse_args_maddpg()
 # Instantiation environments and algorithms
 env = DymolaEnv()
 maddpg = MADDPG(parse_args=parse_args_maddpg)
-
+#Resume Training
+maddpg.load_checkpoint()
 
 #action boundary value
 # action_lower_bounds=[0.25,0.25,1,0.3,273.15+20,273.15+20]
@@ -33,11 +34,11 @@ maddpg = MADDPG(parse_args=parse_args_maddpg)
 action_lower_bounds = np.array([0.25, 0.25, 10, 0.1, 273.15, 273.15])
 action_upper_bounds = np.array([0.8, 0.8, 50, 0.4, 333.15, 273.15+65])
 action_delta_bounds = (action_upper_bounds - action_lower_bounds)*1.0
-control_baseline= np.array([0.4, 0.4, 10, 0.2, 273.15+46, 323])
+# control_baseline= np.array([0.4, 0.4, 10, 0.2, 273.15+46, 323])
 action_offset=np.array([0.4-0.25,0,0,0.2-0.1,46,0])
 
 # max epoch
-num_epoch = 10000
+num_epoch = 1000
 # max step for a game
 max_step = int(env.end_time/env.step_size)
 # Used to record the loss of each parameter iteration
@@ -46,7 +47,8 @@ step_for_loss = 0
 reward_record_agent_0 = 0
 reward_record_agent_1 = 0
 reward_record_agent_2 = 0
-max_reward = -1000000
+# max_reward = -1000000
+max_reward = 100
 # num initial explore
 explore_range = 1
 

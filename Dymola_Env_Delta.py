@@ -21,7 +21,7 @@ class DymolaEnv(Env):
         self.action_space = Tuple((
             Box(low=np.array([0.25]), high=np.array([0.8]), dtype=np.float32),
             # Agent 0: Flow_r, Regeneration air flowrate
-            Box(low=np.array([1]), high=np.array([50]), dtype=np.float32),
+            Box(low=np.array([10]), high=np.array([50]), dtype=np.float32),
             # Agent 1: N, Rotation speed of Desiccant wheel
             Box(low=np.array([273.15]), high=np.array([273.15+65]), dtype=np.float32),
         # Agent 2: Tset2, Temperature setpoint of Heater 2
@@ -34,21 +34,25 @@ class DymolaEnv(Env):
 
         self.output = 30  ## numbers of outputs
         self.start_time = 0  #
-        self.end_time = 6 * 3600  #
+        self.end_time = 8 * 3600  #
         self.current_time = self.start_time
         self.step_size = 300  # Define your own step size, unit is second, 300s = 5min
         self.done = False
         self.energy = 0
         self.num_agents = len(self.action_space)
         self.power_ref = 6000.0
+        self.temp_ref = 20.0
+        self.rh_ref = 1.0
+        self.params_old=[0.4, 10, 323]
+
 
         # for training
-        # self.Temp_d = 273.15 + 46
-        # self.RH_d = 0.2
+        self.Temp_d = 273.15 + 46
+        self.RH_d = 0.19
 
         # for testing
-        self.Temp_d = 273.15 + 46
-        self.RH_d = 0.1
+        # self.Temp_d = 273.15 + 46
+        # self.RH_d = 0.25
 
 
 
@@ -116,27 +120,49 @@ class DymolaEnv(Env):
             agents_dict[f"agent_{i}"] = []
 
         # regeneration fan observation
-        agents_dict['agent_0'].append(self.weather_TP[int(self.current_time / 3600)] - self.Temp_d)
-        agents_dict['agent_0'].append(self.weather_RH[int(self.current_time / 3600)] - self.RH_d)
-        agents_dict['agent_0'].append(self.state[6]-self.Temp_d)
-        agents_dict['agent_0'].append(self.state[7]-self.RH_d)
-        agents_dict['agent_0'].append(paras[1])
+        agents_dict['agent_0'].append((self.weather_TP[int(self.current_time / 3600)] - self.Temp_d)/self.temp_ref)
+        agents_dict['agent_0'].append((self.weather_RH[int(self.current_time / 3600)] - self.RH_d)/self.rh_ref)
+        agents_dict['agent_0'].append((self.state[6]-self.Temp_d)/self.temp_ref)
+        agents_dict['agent_0'].append((self.state[7]-self.RH_d)/self.rh_ref)
+        # Add absolute status
+        # agents_dict['agent_0'].append(self.weather_TP[int(self.current_time / 3600)])
+        # agents_dict['agent_0'].append(self.weather_RH[int(self.current_time / 3600)])
+        # agents_dict['agent_0'].append(self.state[6])
+        # agents_dict['agent_0'].append(self.state[7])
+        #Add agent power
+        agents_dict['agent_0'].append(self.params_old[0])
 
 
 
         # Dessicant Wheel Observation
-        agents_dict['agent_1'].append(self.state[21]-self.Temp_d)
-        agents_dict['agent_1'].append(self.state[22]-self.RH_d)
-        agents_dict['agent_1'].append(self.state[24]-self.Temp_d)
-        agents_dict['agent_1'].append(self.state[25]-self.RH_d)
-        agents_dict['agent_1'].append(paras[2])
+        agents_dict['agent_1'].append((self.state[21]-self.Temp_d)/self.temp_ref)
+        agents_dict['agent_1'].append((self.state[22]-self.RH_d)/self.rh_ref)
+        agents_dict['agent_1'].append((self.state[24]-self.Temp_d)/self.temp_ref)
+        agents_dict['agent_1'].append((self.state[25]-self.RH_d)/self.rh_ref)
+        # Add absolute status
+        # agents_dict['agent_1'].append(self.state[21])
+        # agents_dict['agent_1'].append(self.state[22])
+        # agents_dict['agent_1'].append(self.state[24])
+        # agents_dict['agent_1'].append(self.state[25])
+        # Add agent power
+        agents_dict['agent_1'].append(self.params_old[1]/50)
 
         # Heater 2 observation
-        agents_dict['agent_2'].append(self.state[9]-self.Temp_d)
-        agents_dict['agent_2'].append(self.state[10]-self.RH_d)
-        agents_dict['agent_2'].append(self.state[21]-self.Temp_d)
-        agents_dict['agent_2'].append(self.state[22]-self.RH_d)
-        agents_dict['agent_2'].append(paras[5] - self.Temp_d)
+        agents_dict['agent_2'].append((self.state[9]-self.Temp_d)/self.temp_ref)
+        agents_dict['agent_2'].append((self.state[10]-self.RH_d)/self.rh_ref)
+        agents_dict['agent_2'].append((self.state[21]-self.Temp_d)/self.temp_ref)
+        agents_dict['agent_2'].append((self.state[22]-self.RH_d)/self.rh_ref)
+        # Add absolute status
+        # agents_dict['agent_2'].append(self.state[9])
+        # agents_dict['agent_2'].append(self.state[10])
+        # agents_dict['agent_2'].append(self.state[21])
+        # agents_dict['agent_2'].append(self.state[22])
+        # Add agent power
+        agents_dict['agent_2'].append((self.params_old[2]-self.Temp_d)/self.temp_ref)
+
+        self.params_old[0]=paras[1]
+        self.params_old[1]=paras[2]
+        self.params_old[2] = paras[5]
 
         # Return the observation
         self.obs_env=agents_dict
@@ -184,8 +210,8 @@ class DymolaEnv(Env):
 
         power_reward = (self.power_ref - power) / self.power_ref
 
-        # reward_all = hum_reward + temp_reward
-        reward_all = hum_reward + temp_reward + power_reward
+        reward_all = hum_reward + temp_reward
+        # reward_all = hum_reward + temp_reward + power_reward
 
         reward = {}
 
@@ -250,6 +276,12 @@ class DymolaEnv(Env):
         agents_dict['agent_0'].append(self.weather_RH[int(self.current_time / 3600)] - self.RH_d)
         agents_dict['agent_0'].append(self.state[6] - self.Temp_d)
         agents_dict['agent_0'].append(self.state[7] - self.RH_d)
+        # Add absolute status
+        # agents_dict['agent_0'].append(self.weather_TP[int(self.current_time / 3600)])
+        # agents_dict['agent_0'].append(self.weather_RH[int(self.current_time / 3600)])
+        # agents_dict['agent_0'].append(self.state[6])
+        # agents_dict['agent_0'].append(self.state[7])
+        # Add agent power
         agents_dict['agent_0'].append(0.4)
 
         # Dessicant Wheel Observation
@@ -257,6 +289,12 @@ class DymolaEnv(Env):
         agents_dict['agent_1'].append(self.state[22] - self.RH_d)
         agents_dict['agent_1'].append(self.state[24] - self.Temp_d)
         agents_dict['agent_1'].append(self.state[25] - self.RH_d)
+        # Add absolute status
+        # agents_dict['agent_1'].append(self.state[21])
+        # agents_dict['agent_1'].append(self.state[22])
+        # agents_dict['agent_1'].append(self.state[24])
+        # agents_dict['agent_1'].append(self.state[25])
+        # Add agent power
         agents_dict['agent_1'].append(10)
 
         # Heater 2 observation
@@ -264,6 +302,12 @@ class DymolaEnv(Env):
         agents_dict['agent_2'].append(self.state[10] - self.RH_d)
         agents_dict['agent_2'].append(self.state[21] - self.Temp_d)
         agents_dict['agent_2'].append(self.state[22] - self.RH_d)
+        # Add absolute status
+        # agents_dict['agent_2'].append(self.state[9])
+        # agents_dict['agent_2'].append(self.state[10])
+        # agents_dict['agent_2'].append(self.state[21])
+        # agents_dict['agent_2'].append(self.state[22])
+        # Add agent power
         agents_dict['agent_2'].append(323-self.Temp_d)
 
         self.obs_env = agents_dict

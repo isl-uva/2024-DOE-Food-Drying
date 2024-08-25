@@ -25,7 +25,7 @@ maddpg.load_checkpoint()
 action_lower_bounds = np.array([0.25, 0.25, 10, 0.1, 273.15, 273.15])
 action_upper_bounds = np.array([0.8, 0.8, 50, 0.4, 333.15, 273.15+65])
 action_delta_bounds = (action_upper_bounds - action_lower_bounds)*1.0
-control_baseline= np.array([0.4, 0.4, 10, 0.2, 273.15+46, 323])
+# control_baseline= np.array([0.4, 0.4, 10, 0.2, 273.15+46, 323])
 action_offset=np.array([0.4-0.25,0,0,0.2-0.1,46,0])
 
 # max epoch
